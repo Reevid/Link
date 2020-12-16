@@ -25,6 +25,41 @@
             crossorigin="anonymous"></script>
 
     <title>Site Links</title>
+    
+    <script>
+        function ListHeader(argument1) {
+            var Sample = '<div class="col-md-6 col-lg-4 col-xl-auto" style="max-width: 400px;"> <div class="page-header"><h3>';
+            Sample = Sample + argument1;
+            Sample = Sample + '</div> <p> ';
+            return Sample;
+        }
+        function Add(argument1, btn, link) {
+            var Sample = '<a href=';
+            Sample = Sample + link;
+            Sample = Sample + ' target="_blank" class="btn btn-';
+            if (btn == "") {
+                btn = "default  btn-outline-dark"
+            }
+            Sample = Sample + btn;
+            Sample = Sample + '" style="margin-bottom: 4.5px; margin-right: 4.5px;">';
+            Sample = Sample + argument1;
+            Sample = Sample + '</a>';
+            return Sample;
+        }
+        function ListFooter() {
+            var Sample = ' </p>' + ' </div>';
+            return Sample;
+        }
+        function Items(argument1) {
+            const header = ListHeader(argument1);
+            const footer = ListFooter();
+            let res = "";
+            for (let i = 1; i < arguments.length; i++) {
+                res += arguments[i];
+            }
+            document.write(header + res + footer);
+        }
+    </script>
 </head>
 
 <body role="document">
@@ -182,21 +217,12 @@
                     </a>
                 </p>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>희정이</h3>
-                </div>
-                <p>
-                    <a href="https://www.instagram.com/coco_o323/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-instagram"></i>
-                        Instagram
-                    </a>
-                </p>
-            </div>
+            <script>
+                Items(
+                    "희정이",
+                    Add("Instagram", "", ""),
+                );
+            </script>
             <div class="col-md-6 col-lg-4 col-xl-auto"
                  style="max-width: 400px;">
                 <div class="page-header">
