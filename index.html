@@ -25,7 +25,7 @@
             crossorigin="anonymous"></script>
 
     <title>Site Links</title>
-    
+
     <script>
         function ListHeader(argument1) {
             var Sample = '<div class="col-md-6 col-lg-4 col-xl-auto" style="max-width: 400px;"> <div class="page-header"><h3>';
@@ -50,6 +50,19 @@
             var Sample = ' </p>' + ' </div>';
             return Sample;
         }
+        function Link(argument1, argument2) {
+            var Sample = '<img src="';
+            Sample = Sample + argument2;
+            Sample = Sample + '" height="18px" style="vertical-align: text-bottom; padding-bottom: 2px;"> ';
+            Sample = Sample + argument1;
+            return Sample;
+        }
+        function Icon(argument1) {
+            var Sample = '<i class="';
+            Sample = Sample + argument1;
+            Sample = Sample + '"></i> ';
+            return Sample;
+        }
         function Items(argument1) {
             const header = ListHeader(argument1);
             const footer = ListFooter();
@@ -66,58 +79,16 @@
     <div class="container-fluid"
          style="padding: 10px;">
         <div class="row justify-content-around">
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>My</h3>
-                </div>
-                <p>
-                    <a href="https://getpocket.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-get-pocket"></i>
-                        GetPocket
-                    </a>
-                    <a href="https://app.plex.tv/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img class="fab"
-                             src="./plex_icon_130854.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Desktop
-                    </a>
-                    <a href="https://calendar.google.com/calendar/u/0/r/month"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/330px-Google_Calendar_icon_%282020%29.svg.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Google 캘린더
-                    </a>
-                    <a href="https://keep.google.com/#home"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://www.debongo.com/wp-content/uploads/2013/08/0x0ss-85.jpg"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Keep
-                    </a>
-                    <a href="https://github.com/Reevid/Link/edit/main/index.html"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://image.flaticon.com/icons/png/512/25/25231.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Link 수정
-                    </a>
-                </p>
-            </div>
+            <script>
+                Items(
+                    "My",
+                    Add(Icon("fab fa-get-pocket") + "GetPocket", "", "https://getpocket.com/"),
+                    Add(Link("Desktop", "./plex_icon_130854.ico"), "", "https://app.plex.tv/"),
+                    Add(Link("Google 캘린더", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/330px-Google_Calendar_icon_%282020%29.svg.png") , "", "https://calendar.google.com/calendar/u/0/r/month"),
+                    Add(Link("Keep", "https://www.debongo.com/wp-content/uploads/2013/08/0x0ss-85.jpg"), "", "https://keep.google.com/#home"),
+                    Add(Link("Link 수정", "https://image.flaticon.com/icons/png/512/25/25231.png"), "", "https://github.com/Reevid/Link/edit/main/index.html"),
+                    );
+            </script>
             <div class="col-md-6 col-lg-4 col-xl-auto"
                  style="max-width: 400px;">
                 <div class="page-header">
@@ -220,7 +191,7 @@
             <script>
                 Items(
                     "희정이",
-                    Add("Instagram", "", ""),
+                    Add(Icon("fab fa-instagram") + "Instagram", "", "https://www.instagram.com/coco_o323/"),
                 );
             </script>
             <div class="col-md-6 col-lg-4 col-xl-auto"
