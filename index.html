@@ -57,10 +57,11 @@
             Sample = Sample + argument1;
             return Sample;
         }
-        function Icon(argument1) {
+        function Icon(argument1, argument2) {
             var Sample = '<i class="';
-            Sample = Sample + argument1;
+            Sample = Sample + argument2;
             Sample = Sample + '"></i> ';
+            Sample = Sample + argument1;
             return Sample;
         }
         function Items(argument1) {
@@ -82,403 +83,86 @@
             <script>
                 Items(
                     "My",
-                    Add(Icon("fab fa-get-pocket") + "GetPocket", "", "https://getpocket.com/"),
+                    Add(Icon("GetPocket", "fab fa-get-pocket"), "", "https://getpocket.com/"),
                     Add(Link("Desktop", "./plex_icon_130854.ico"), "", "https://app.plex.tv/"),
-                    Add(Link("Google 캘린더", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/330px-Google_Calendar_icon_%282020%29.svg.png") , "", "https://calendar.google.com/calendar/u/0/r/month"),
+                    Add(Link("Google 캘린더", "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/330px-Google_Calendar_icon_%282020%29.svg.png"), "", "https://calendar.google.com/calendar/u/0/r/month"),
                     Add(Link("Keep", "https://www.debongo.com/wp-content/uploads/2013/08/0x0ss-85.jpg"), "", "https://keep.google.com/#home"),
                     Add(Link("Link 수정", "https://image.flaticon.com/icons/png/512/25/25231.png"), "", "https://github.com/Reevid/Link/edit/main/index.html"),
-                    );
-            </script>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Media</h3>
-                </div>
-                <p>
-                    <a href="https://www.youtube.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/YouTube_play_buttom_icon_%282013-2017%29.svg/1280px-YouTube_play_buttom_icon_%282013-2017%29.svg.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        YouTube
-                    </a>
-                    <a href="https://music.youtube.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://user-images.githubusercontent.com/868109/63057127-5d3e8780-be9e-11e9-9488-bf280a5ff1ed.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        YouTube Music
-                    </a>
-                    <a href="https://www.facebook.com/watch"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-facebook-square"></i>
-                        Facebook Watch
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Plex</h3>
-                </div>
-                <p>
-                    <a href="http://reevid.asuscomm.com:8181/home"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img class="fab"
-                             src="http://reevid.asuscomm.com:8181/images/favicon/favicon-32x32.png?v=2.6.0"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Tautilli
-                    </a>
-                    <a href="https://app.plex.tv/desktop#!/media/cea0b598676e122d3fe5e86e9eac69ac8fb162ce/com.plexapp.plugins.library?pageType=list&key=%2Flibrary%2Fsections%2F17%2Fall%3Ftype%3D1&context=content.library&source=17&customFilter=1&save=1&filters=resolution%3D4k%2C2k%2C1080%26originallyAvailableAt%253E%253E%3D-5364692924%26unwatched%3D1&sort=originallyAvailableAt%3Adesc"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img class="fab"
-                             src="./plex_icon_130854.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Shared by other with filter
-                    </a>
-                    <a href="https://app.plex.tv/desktop#!/settings/server/cea0b598676e122d3fe5e86e9eac69ac8fb162ce/manage/console"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img class="fab"
-                             src="./plex_icon_130854.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Console
-                    </a>
-                    <a href="https://cafe.naver.com/plexserver"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ssl.pstatic.net/static/common/gnb/2018/service_logo/cafe.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Plex
-                    </a>
-                    <a href="https://cafe.naver.com/gsuite"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ssl.pstatic.net/static/common/gnb/2018/service_logo/cafe.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        GSuite
-                    </a>
-                    <a href="https://www.plex.tv/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img class="fab"
-                             src="./plex_icon_130854.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Official Web Site
-                    </a>
-                </p>
-            </div>
-            <script>
+                );
+                Items(
+                    "Media",
+                    Add(Link("YouTube", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/YouTube_play_buttom_icon_%282013-2017%29.svg/1280px-YouTube_play_buttom_icon_%282013-2017%29.svg.png"), "", "https://www.youtube.com/"),
+                    Add(Link("YouTube Music", "https://user-images.githubusercontent.com/868109/63057127-5d3e8780-be9e-11e9-9488-bf280a5ff1ed.png"), "", "https://music.youtube.com/"),
+                    Add(Icon("Facebook Watch", "fab fa-facebook-square"), "", "https://www.facebook.com/watch"),
+                );
+                Items(
+                    "Plex",
+                    Add(Link("Tautilli", "http://reevid.asuscomm.com:8181/images/favicon/favicon-32x32.png?v=2.6.0"), "", "http://reevid.asuscomm.com:8181/home"),
+                    Add(Link("Shared by other with filter", "./plex_icon_130854.ico"), "", "https://app.plex.tv/desktop#!/media/cea0b598676e122d3fe5e86e9eac69ac8fb162ce/com.plexapp.plugins.library?pageType=list&key=%2Flibrary%2Fsections%2F17%2Fall%3Ftype%3D1&context=content.library&source=17&customFilter=1&save=1&filters=resolution%3D4k%2C2k%2C1080%26originallyAvailableAt%253E%253E%3D-5364692924%26unwatched%3D1&sort=originallyAvailableAt%3Adesc"),
+                    Add(Link("Console", "./plex_icon_130854.ico"), "", "https://app.plex.tv/desktop#!/settings/server/cea0b598676e122d3fe5e86e9eac69ac8fb162ce/manage/console"),
+                    Add(Link("Plex", "https://ssl.pstatic.net/static/common/gnb/2018/service_logo/cafe.png"), "", "https://cafe.naver.com/plexserver"),
+                    Add(Link("GSuite", "https://ssl.pstatic.net/static/common/gnb/2018/service_logo/cafe.png"), "", "https://cafe.naver.com/gsuite"),
+                    Add(Link("Official Web Site", "./plex_icon_130854.ico"), "", "https://www.plex.tv/"),
+                );
                 Items(
                     "희정이",
-                    Add(Icon("fab fa-instagram") + "Instagram", "", "https://www.instagram.com/coco_o323/"),
+                    Add(Icon("Instagram", "fab fa-instagram"), "", "https://www.instagram.com/coco_o323/"),
                 );
+                Items(
+                    "Messenger",
+                    Add(Link("Hangouts", "https://ssl.gstatic.com/chat/startpage/favicon_f1bac5c7ba3154b58080de921eb6d5ea.ico"), "", "https://hangouts.google.com/"),
+                    Add(Icon("Facebook Messages", "fab fa-facebook-square"), "", "https://www.facebook.com/messages/"),
+                );
+                Items(
+                    "Social Network Service",
+                    Add(Icon("Facebook", "fab fa-facebook-square"), "", "https://www.facebook.com/"),
+                    Add(Icon("Instagram", "fab fa-instagram"), "", "https://www.instagram.com/"),
+                    Add(Link("Grocerant (회사 반찬 가게 메뉴)", "https://ssl.pstatic.net/cmstatic/webclient/icon/20200615184036/favicon.ico"), "", "https://band.us/band/75692040"),
+                );
+                Items(
+                    "Shop",
+                    Add(Link("Funshop", "https://funshop.akamaized.net//newm/app_icon2.png"), "", "https://www.funshop.co.kr/"),
+                    Add(Link("10X10", "http://fiximage.10x10.co.kr/icons/10x10_140616.ico"), "", "https://www.10x10.co.kr/"),
+                    Add(Link("오늘의집", "https://ohou.se/assets/bookmark_icon/favicon_144x144.png"), "", "https://ohou.se/store"),
+                    Add(Link("Aliexpress", "https://ae01.alicdn.com/images/eng/wholesale/icon/aliexpress.ico"), "", "https://best.aliexpress.com/?lan=ko"),
+                );
+                Items(
+                    "My Feed",
+                    Add(Icon("Facebook", "fab fa-facebook-square"), "", "https://www.facebook.com/reevid"),
+                    Add(Icon("Instagram", "fab fa-instagram"), "", "https://www.instagram.com/reevidkim/"),
+                );
+                Items(
+                    "Deep Learning",
+                    Add(Link("텐서플로우 튜토리얼", "https://avatars0.githubusercontent.com/u/15658638?s=200&v=4"), "", "https://www.tensorflow.org/tutorials?hl=ko"),
+                );
+                Items(
+                    "Torrent",
+                    Add(Link("ruTorrent", "http://reevid.asuscomm.com:8090/images/favicon-32x32.png"), "", "http://reevid.asuscomm.com:8090/"),
+                    Add(Link("Korean", "./iptorrent_favicon.ico"), "", "https://iptorrents.com/t?87=&77=&101=&89=&90=&96=&6=&48=&54=&62=&38=&68=&20=&100=&7=&1080p=on&2160p=on&q=Korean&qf=all#torrents"),
+                );
+                Items(
+                    "웹사이트 꾸미기",
+                    Add(Icon("Bootstrap", "fab fa-bootstrap"), "", "https://getbootstrap.com/docs/4.4/getting-started/introduction/"),
+                    Add(Link("Font Awesome", "https://fontawesome.com/images/favicons/apple-icon-180x180.png"), "", "https://fontawesome.com/"),
+                    Add(Link("icon-icons (아이콘 다운로드)", "https://cdn.icon-icons.com/images/apple-touch-icon-iphone-60x60-precomposed.png"), "", "https://icon-icons.com/ko/"),
+                );
+                Items(
+                    "카메라",
+                    Add(Link("DSC-RX100M7 매뉴얼", "https://www.sony.co.kr/static-assets/images/Favicon_144x144.png"), "", "https://www.sony.co.kr/electronics/support/compact-cameras-dsc-rx-series/dsc-rx100m7#manuals"),
+                    Add(Link("GP-VPT2BT 매뉴얼", "https://www.sony.co.kr/static-assets/images/Favicon_144x144.png"), "", "https://www.sony.co.kr/electronics/support/camera-camcorder-accessories-tripods-grips/gp-vpt2bt/manuals"),
+                    Add(Link("Ulanzi (퀵릴리스)", "https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-1/p200x200/107259580_571540906843061_7132838647627523589_n.jpg?_nc_cat=102&ccb=2&_nc_sid=1eb0c7&_nc_eui2=AeEoNb7wH8I9Wo_2Mb09XHqQ7US6tkPEYJ_tRLq2Q8Rgn2LwxAI6HYLWJB-NYbijEWK4xh7duDBQ9-jIR1DxHYkj&_nc_ohc=SfBuKZg2mEoAX-hQGWY&_nc_ht=scontent-gmp1-1.xx&tp=6&oh=1395a37fef10cebe2fa2982a1543706d&oe=5FE4DF6F"), "", "https://www.ulanzi.com/"),
+                );
+                Items(
+                    "Official Website",
+                    Add(Icon("Apple Korea", "fab fa-apple"), "", "https://www.apple.com/kr/"),
+                );
+                // Items(
+                //     "",
+                //     Add(Link("", ""), "", ""),
+                //     Add(Link("", ""), "", ""),
+                //     Add(Link("", ""), "", ""),
+                // );
             </script>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Messenger</h3>
-                </div>
-                <p>
-                    <a href="https://hangouts.google.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ssl.gstatic.com/chat/startpage/favicon_f1bac5c7ba3154b58080de921eb6d5ea.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Hangouts
-                    </a>
-                    <a href="https://www.facebook.com/messages/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-facebook-square"></i>
-                        Facebook Messages
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Social Network Service</h3>
-                </div>
-                <p>
-                    <a href="https://www.facebook.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-facebook-square"></i>
-                        Facebook
-                    </a>
-                    <a href="https://www.instagram.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-instagram"></i>
-                        Instagram
-                    </a>
-                    </a>
-                    <a href="https://band.us/band/75692040"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ssl.pstatic.net/cmstatic/webclient/icon/20200615184036/favicon.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Grocerant (회사 반찬 가게 메뉴)
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Shop</h3>
-                </div>
-                <p>
-                    <a href="https://www.funshop.co.kr/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://funshop.akamaized.net//newm/app_icon2.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Funshop
-                    </a>
-                    <a href="https://www.10x10.co.kr/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="http://fiximage.10x10.co.kr/icons/10x10_140616.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        10X10
-                    </a>
-                    <a href="https://ohou.se/store"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ohou.se/assets/bookmark_icon/favicon_144x144.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        오늘의집
-                    </a>
-                    <a href="https://best.aliexpress.com/?lan=ko"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ae01.alicdn.com/images/eng/wholesale/icon/aliexpress.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Aliexpress
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>My Feed</h3>
-                </div>
-                <p>
-                    <a href="https://www.facebook.com/reevid"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-facebook-square"></i>
-                        Facebook
-                    </a>
-                    <a href="https://www.instagram.com/reevidkim/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-instagram"></i>
-                        Instagram
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Deep Learning</h3>
-                </div>
-                <p>
-                    <a href="https://www.tensorflow.org/tutorials?hl=ko"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://avatars0.githubusercontent.com/u/15658638?s=200&v=4"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        텐서플로우 튜토리얼
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Torrent</h3>
-                </div>
-                <p>
-                    <a href="http://reevid.asuscomm.com:8090/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="http://reevid.asuscomm.com:8090/images/favicon-32x32.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        ruTorrent
-                    </a>
-                    <a href="https://iptorrents.com/t?87=&77=&101=&89=&90=&96=&6=&48=&54=&62=&38=&68=&20=&100=&7=&1080p=on&2160p=on&q=Korean&qf=all#torrents"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img class="fab"
-                             src="./iptorrent_favicon.ico"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Korean
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Car</h3>
-                </div>
-                <p>
-                    <a href="https://cafe.naver.com/starcrep"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://ssl.pstatic.net/static/common/gnb/2018/service_logo/cafe.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        쏘렌토 MQ4
-                    </a>
-
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>웹사이트 꾸미기</h3>
-                </div>
-                <p>
-                    <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-bootstrap"></i>
-                        Bootstrap
-                    </a>
-                    <a href="https://fontawesome.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://fontawesome.com/images/favicons/apple-icon-180x180.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Font Awesome
-                    </a>
-                    <a href="https://icon-icons.com/ko/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://cdn.icon-icons.com/images/apple-touch-icon-iphone-60x60-precomposed.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        icon-icons (아이콘 다운로드)
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>카메라</h3>
-                </div>
-                <p>
-                    <a href="https://www.sony.co.kr/electronics/support/compact-cameras-dsc-rx-series/dsc-rx100m7#manuals"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://www.sony.co.kr/static-assets/images/Favicon_144x144.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        DSC-RX100M7 매뉴얼
-                    </a>
-                    <a href="https://www.sony.co.kr/electronics/support/camera-camcorder-accessories-tripods-grips/gp-vpt2bt/manuals"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://www.sony.co.kr/static-assets/images/Favicon_144x144.png"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        GP-VPT2BT 매뉴얼
-                    </a>
-                    <a href="https://www.ulanzi.com/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <img src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-1/p200x200/107259580_571540906843061_7132838647627523589_n.jpg?_nc_cat=102&ccb=2&_nc_sid=1eb0c7&_nc_eui2=AeEoNb7wH8I9Wo_2Mb09XHqQ7US6tkPEYJ_tRLq2Q8Rgn2LwxAI6HYLWJB-NYbijEWK4xh7duDBQ9-jIR1DxHYkj&_nc_ohc=SfBuKZg2mEoAX-hQGWY&_nc_ht=scontent-gmp1-1.xx&tp=6&oh=1395a37fef10cebe2fa2982a1543706d&oe=5FE4DF6F"
-                             height="18px"
-                             style="vertical-align: text-bottom; padding-bottom: 2px;">
-                        Ulanzi (퀵릴리스)
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3>Official Website</h3>
-                </div>
-                <p>
-                    <a href="https://www.apple.com/kr/"
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                        <i class="fab fa-apple"></i>
-                        Apple Korea
-                    </a>
-
-                </p>
-            </div>
-            <!-- <div class="col-md-6 col-lg-4 col-xl-auto"
-                 style="max-width: 400px;">
-                <div class="page-header">
-                    <h3></h3>
-                </div>
-                <p>
-                    <a href=""
-                       target="_blank"
-                       class="btn btn-default btn-outline-dark"
-                       style="margin-bottom: 4.5px;">
-                    </a>
-
-                    <img src="./"
-                         height="18px"
-                         style="vertical-align: text-bottom; padding-bottom: 2px;">
-                </p>
-            </div> -->
         </div>
     </div>
 
